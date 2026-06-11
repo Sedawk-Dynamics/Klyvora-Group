@@ -2,6 +2,7 @@ import { Navbar } from "@/components/navbar"
 import { PageHeader } from "@/components/page-header"
 import { CaseStudiesSection } from "@/components/case-studies"
 import { Footer } from "@/components/contact-footer"
+import { JsonLd, breadcrumb } from "@/components/json-ld"
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -21,6 +22,9 @@ export const metadata: Metadata = {
     description: "Real results from real estate companies transformed by Klyvora.",
     url: "/case-studies",
   },
+  alternates: {
+    canonical: "/case-studies",
+  },
 }
 
 const caseStudiesHeaderData = {
@@ -34,6 +38,7 @@ const caseStudiesHeaderData = {
 export default function CaseStudies() {
   return (
     <main>
+      <JsonLd data={breadcrumb([{ name: "Home", path: "/" }, { name: "Case Studies", path: "/case-studies" }])} />
       <Navbar />
       <PageHeader {...caseStudiesHeaderData} />
       <CaseStudiesSection />

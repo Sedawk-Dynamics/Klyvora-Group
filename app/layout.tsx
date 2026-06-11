@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { JsonLd, SITE_URL } from '@/components/json-ld'
 import './globals.css'
 
 const inter = Inter({
@@ -62,8 +63,15 @@ export const metadata: Metadata = {
 
   generator: 'v0.app',
 
+  manifest: '/site.webmanifest',
+
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
+      { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
   },
 
   alternates: {
@@ -85,13 +93,42 @@ export default function RootLayout({
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
         />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
       </head>
 
       <body
         className={`${inter.variable} ${playfair.variable} font-sans antialiased`}
       >
+        <JsonLd
+          data={{
+            '@context': 'https://schema.org',
+            '@graph': [
+              {
+                '@type': 'Organization',
+                '@id': `${SITE_URL}/#organization`,
+                name: 'Klyvora Group',
+                url: SITE_URL,
+                logo: `${SITE_URL}/logo.png`,
+                description:
+                  'Klyvora Group places Big-Four-caliber accounting and finance professionals from India with U.S. real estate investment firms.',
+                contactPoint: {
+                  '@type': 'ContactPoint',
+                  telephone: '+1-847-471-1251',
+                  email: 'Info@klyvora-group.com',
+                  contactType: 'sales',
+                  areaServed: 'US',
+                  availableLanguage: 'English',
+                },
+              },
+              {
+                '@type': 'WebSite',
+                '@id': `${SITE_URL}/#website`,
+                name: 'Klyvora Group',
+                url: SITE_URL,
+                publisher: { '@id': `${SITE_URL}/#organization` },
+              },
+            ],
+          }}
+        />
         {children}
         <Analytics />
       </body>

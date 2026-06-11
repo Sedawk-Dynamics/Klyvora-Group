@@ -40,7 +40,7 @@ export function Navbar() {
     return () => observer.disconnect()
   }, [])
 
-  const handleNavClick = (href: string, external: boolean) => {
+  const handleNavClick = (href: string, external: boolean = false) => {
     setOpen(false)
     if (external) {
       window.location.href = href
@@ -69,31 +69,28 @@ export function Navbar() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => {
-            const isActive =
-              !link.external &&
-              link.href.startsWith("#") &&
-              activeSection === link.href.replace("#", "")
+            const isAnchor = link.href.startsWith("#")
+            const className =
+              "relative text-sm font-medium tracking-wide transition-colors pb-0.5 hover:text-coral text-foreground"
+
+            // In-page anchors stay as smooth-scroll buttons; real routes render
+            // crawlable <a> links so search engines can follow them.
+            if (isAnchor) {
+              return (
+                <button
+                  key={link.href}
+                  onClick={() => handleNavClick(link.href, false)}
+                  className={className}
+                >
+                  {link.label}
+                </button>
+              )
+            }
 
             return (
-              <button
-                key={link.href}
-                onClick={() => handleNavClick(link.href, link.external)}
-                className={cn(
-                  "relative text-sm font-medium tracking-wide transition-colors pb-0.5 hover:text-coral",
-                  isActive ? "text-secondary" : "text-foreground"
-                )}
-              >
+              <Link key={link.href} href={link.href} className={className}>
                 {link.label}
-
-                {!link.external && (
-                  <span
-                    className={cn(
-                      "absolute bottom-0 left-0 right-0 h-0.5 rounded-full bg-coral transition-transform duration-300 origin-left",
-                      isActive ? "scale-x-100" : "scale-x-0"
-                    )}
-                  />
-                )}
-              </button>
+              </Link>
             )
           })}
         </nav>
@@ -125,15 +122,34 @@ export function Navbar() {
         )}
       >
         <div className="px-6 pb-6 pt-4 flex flex-col gap-4">
-          {navLinks.map((link) => (
-            <button
-              key={link.href}
-              onClick={() => handleNavClick(link.href, link.external)}
-              className="text-left text-base font-medium text-foreground hover:text-coral transition-colors py-1"
-            >
-              {link.label}
-            </button>
-          ))}
+          {navLinks.map((link) => {
+            const isAnchor = link.href.startsWith("#")
+            const className =
+              "text-left text-base font-medium text-foreground hover:text-coral transition-colors py-1"
+
+            if (isAnchor) {
+              return (
+                <button
+                  key={link.href}
+                  onClick={() => handleNavClick(link.href, false)}
+                  className={className}
+                >
+                  {link.label}
+                </button>
+              )
+            }
+
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className={className}
+              >
+                {link.label}
+              </Link>
+            )
+          })}
           <button
             onClick={() => handleNavClick("#contact", false)}
             className="mt-2 bg-primary text-primary-foreground text-sm font-semibold px-5 py-3 rounded-full hover:bg-coral transition-colors"

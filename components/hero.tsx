@@ -106,7 +106,7 @@ export function Hero() {
           </div> */}
 
           {/* Headline with enhanced typography */}
-          <h2
+          <h1
             className={`font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight text-balance mb-6 drop-shadow-lg ${visible ? "animate-fade-up delay-150" : "opacity-0"
               }`}
           >
@@ -115,7 +115,7 @@ export function Hero() {
               Big 4 Accounting & Finance
             </span>{" "}
             Talent
-          </h2>
+          </h1>
 
           {/* Body text with improved readability */}
           <p

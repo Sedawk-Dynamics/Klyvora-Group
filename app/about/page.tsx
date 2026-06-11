@@ -2,6 +2,7 @@ import { Navbar } from "@/components/navbar"
 import { PageHeader } from "@/components/page-header"
 import { AboutPage } from "@/components/about-page"
 import { Footer } from "@/components/contact-footer"
+import { JsonLd, breadcrumb } from "@/components/json-ld"
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -19,6 +20,9 @@ export const metadata: Metadata = {
     description: "Elite accounting talent connection for real estate firms. Learn our mission and values.",
     url: "/about",
   },
+  alternates: {
+    canonical: "/about",
+  },
 }
 
 const aboutHeaderData = {
@@ -31,6 +35,7 @@ const aboutHeaderData = {
 export default function About() {
   return (
     <main>
+      <JsonLd data={breadcrumb([{ name: "Home", path: "/" }, { name: "About", path: "/about" }])} />
       <Navbar />
       <PageHeader {...aboutHeaderData} />
       <AboutPage />
