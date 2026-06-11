@@ -152,22 +152,22 @@ export function Contact() {
                 <h3 className="font-serif text-2xl font-bold text-primary mb-8">Tell us about your firm</h3>
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   {[
-                    { name: "name", label: "Full Name", type: "text", placeholder: "Jane Smith", required: true },
-                    { name: "company", label: "Company Name", type: "text", placeholder: "Acme Real Estate Partners", required: true },
-                    { name: "email", label: "Email Address", type: "email", placeholder: "jane@acmerealestate.com", required: true },
-                    { name: "phone", label: "Phone Number", type: "tel", placeholder: "(312) 555-0100", required: false },
-                  ].map((field) => (
+  { name: "name", label: "Full Name", type: "text", placeholder: "Jane Smith" },
+  { name: "company", label: "Company Name", type: "text", placeholder: "Acme Real Estate Partners" },
+  { name: "email", label: "Email Address", type: "email", placeholder: "jane@acmerealestate.com" },
+  { name: "phone", label: "Phone Number", type: "tel", placeholder: "(312) 555-0100" },
+].map((field) => (
                     <div key={field.name} className="flex flex-col gap-1.5 group">
                       <label htmlFor={field.name} className="text-sm font-semibold text-foreground">
                         {field.label}
-                        {field.required && <span className="text-secondary ml-0.5" aria-hidden="true">*</span>}
+
                       </label>
                       <input
                         id={field.name}
                         name={field.name}
                         type={field.type}
                         placeholder={field.placeholder}
-                        required={field.required}
+                       
                         value={form[field.name as keyof typeof form]}
                         onChange={handleChange}
                         className="h-11 px-4 rounded-xl border border-border bg-surface text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-secondary/40 focus:border-secondary transition-all duration-200"
@@ -178,13 +178,13 @@ export function Contact() {
                 <div className="flex flex-col gap-1.5 mb-8">
                   <label htmlFor="message" className="text-sm font-semibold text-foreground">
                     How can we help you?
-                    <span className="text-secondary ml-0.5" aria-hidden="true">*</span>
+                    
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     rows={5}
-                    required
+                   
                     placeholder="Tell us about the role you need to fill, your team size, and any specific requirements..."
                     value={form.message}
                     onChange={handleChange}
