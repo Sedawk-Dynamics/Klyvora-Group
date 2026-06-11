@@ -1,0 +1,34 @@
+# Klyvora Group - Robots.txt
+# This file tells search engine crawlers which pages to crawl and which to ignore
+
+User-agent: *
+Allow: /
+Disallow: /api
+Disallow: /admin
+Disallow: /.next
+Disallow: /node_modules
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://www.klyvora-group.com/sitemap.xml

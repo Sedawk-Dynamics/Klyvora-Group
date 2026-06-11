@@ -1,0 +1,271 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Klyvora Group brand palette: navy, steel blue, off-white */
+  --background: oklch(0.985 0.003 240);       /* near-white with cool tint */
+  --foreground: oklch(0.16 0.02 240);          /* deep navy */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.16 0.02 240);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.16 0.02 240);
+  --primary: oklch(0.16 0.04 245);             /* deep navy (ONE color) */
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.52 0.1 230);            /* steel blue (MARKET color) */
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.94 0.005 240);
+  --muted-foreground: oklch(0.46 0.02 240);
+  --accent: oklch(0.52 0.1 230);              /* steel blue accent */
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.88 0.006 240);
+  --input: oklch(0.88 0.006 240);
+  --ring: oklch(0.52 0.1 230);
+  --chart-1: oklch(0.52 0.1 230);
+  --chart-2: oklch(0.16 0.04 245);
+  --chart-3: oklch(0.65 0.08 220);
+  --chart-4: oklch(0.75 0.07 230);
+  --chart-5: oklch(0.85 0.04 235);
+  --radius: 0.5rem;
+  --sidebar: oklch(0.16 0.04 245);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.52 0.1 230);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.22 0.04 245);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.25 0.04 245);
+  --sidebar-ring: oklch(0.52 0.1 230);
+  /* Custom brand tokens */
+  --navy: oklch(0.16 0.04 245);
+  --steel-blue: oklch(0.52 0.1 230);
+  --light-blue: oklch(0.72 0.07 225);
+  --surface: oklch(0.97 0.004 240);
+  /* Vibrant accent colors */
+  --emerald: oklch(0.72 0.17 160);
+  --coral: oklch(0.72 0.18 25);
+  --amber: oklch(0.80 0.16 75);
+  --violet: oklch(0.65 0.18 290);
+  --teal: oklch(0.70 0.14 185);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-navy: var(--navy);
+  --color-steel-blue: var(--steel-blue);
+  --color-light-blue: var(--light-blue);
+  --color-surface: var(--surface);
+  --color-emerald: var(--emerald);
+  --color-coral: var(--coral);
+  --color-amber: var(--amber);
+  --color-violet: var(--violet);
+  --color-teal: var(--teal);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ── Animation keyframes ─────────────────────────────── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-36px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slide-in-right {
+  from { opacity: 0; transform: translateX(36px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50%       { background-position: 100% 50%; }
+}
+@keyframes draw-line {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+@keyframes subtle-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+@keyframes subtle-pulse-delayed {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.9; }
+}
+@keyframes flip-card {
+  from {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotateY(180deg);
+    opacity: 1;
+  }
+}
+@keyframes flip-card-back {
+  from {
+    transform: rotateY(180deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+@keyframes hover-lift {
+  from {
+    transform: translateY(0px) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(82, 144, 229, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(82, 144, 229, 0.6);
+  }
+}
+
+/* ── Animation utility classes ───────────────────────── */
+.animate-fade-up {
+  animation: fade-up 0.65s ease-out both;
+}
+.animate-fade-in {
+  animation: fade-in 0.55s ease-out both;
+}
+.animate-slide-in-left {
+  animation: slide-in-left 0.65s ease-out both;
+}
+.animate-slide-in-right {
+  animation: slide-in-right 0.65s ease-out both;
+}
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradient-shift 5s ease infinite;
+}
+.animate-flip {
+  animation: flip-card 0.6s ease-in-out both;
+}
+.animate-flip-back {
+  animation: flip-card-back 0.6s ease-in-out both;
+}
+.animate-hover-lift {
+  animation: hover-lift 0.4s ease-out forwards;
+}
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* ── Stagger delay helpers ───────────────────────────── */
+.delay-75  { animation-delay: 75ms; }
+.delay-150 { animation-delay: 150ms; }
+.delay-225 { animation-delay: 225ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-375 { animation-delay: 375ms; }
+.delay-450 { animation-delay: 450ms; }
+.delay-600 { animation-delay: 600ms; }
+
+/* ── Pause marquee on hover ──────────────────────────── */
+.marquee-track:hover .animate-marquee {
+  animation-play-state: paused;
+}
