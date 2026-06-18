@@ -269,3 +269,117 @@
 .marquee-track:hover .animate-marquee {
   animation-play-state: paused;
 }
+
+/* ── Ghost blog post body (rendered HTML from the Content API) ──────── */
+.blog-content {
+  color: var(--foreground);
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+.blog-content > * + * {
+  margin-top: 1.25em;
+}
+.blog-content h1,
+.blog-content h2,
+.blog-content h3,
+.blog-content h4 {
+  color: var(--primary);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 2em;
+  margin-bottom: 0.6em;
+  text-wrap: balance;
+}
+.blog-content h1 { font-size: 2rem; }
+.blog-content h2 { font-size: 1.6rem; }
+.blog-content h3 { font-size: 1.3rem; }
+.blog-content h4 { font-size: 1.1rem; }
+.blog-content p {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+.blog-content a {
+  color: var(--secondary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+.blog-content a:hover {
+  color: var(--coral, var(--secondary));
+}
+.blog-content strong { color: var(--primary); font-weight: 700; }
+.blog-content ul,
+.blog-content ol {
+  margin: 1.25em 0;
+  padding-left: 1.5em;
+}
+.blog-content ul { list-style: disc; }
+.blog-content ol { list-style: decimal; }
+.blog-content li { margin: 0.5em 0; }
+.blog-content li::marker { color: var(--secondary); }
+.blog-content blockquote {
+  border-left: 4px solid var(--secondary);
+  padding: 0.25em 0 0.25em 1.25em;
+  margin: 1.5em 0;
+  font-style: italic;
+  color: var(--muted-foreground);
+}
+.blog-content img,
+.blog-content video,
+.blog-content iframe {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  margin: 1.75em auto;
+  display: block;
+}
+.blog-content figure { margin: 1.75em 0; }
+.blog-content figcaption {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-top: 0.6em;
+}
+.blog-content hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 2.5em 0;
+}
+.blog-content code {
+  background: var(--muted);
+  color: var(--primary);
+  padding: 0.15em 0.4em;
+  border-radius: 0.3rem;
+  font-size: 0.9em;
+}
+.blog-content pre {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  padding: 1.25em;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.blog-content pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+.blog-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.75em 0;
+  font-size: 0.95rem;
+}
+.blog-content th,
+.blog-content td {
+  border: 1px solid var(--border);
+  padding: 0.6em 0.9em;
+  text-align: left;
+}
+.blog-content th {
+  background: var(--muted);
+  color: var(--primary);
+  font-weight: 600;
+}
