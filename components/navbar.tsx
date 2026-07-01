@@ -97,12 +97,12 @@ export function Navbar() {
 
         {/* CTA Button */}
         <div className="hidden md:flex items-center">
-          <button
-            onClick={() => handleNavClick("#contact")}
+          <Link
+            href="/contact"
             className="text-sm font-semibold px-5 py-2.5 rounded-full bg-primary text-primary-foreground hover:bg-secondary transition-colors duration-200"
           >
             Get in Touch
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -150,12 +150,13 @@ export function Navbar() {
               </Link>
             )
           })}
-          <button
-            onClick={() => handleNavClick("#contact", false)}
-            className="mt-2 bg-primary text-primary-foreground text-sm font-semibold px-5 py-3 rounded-full hover:bg-coral transition-colors"
+          <Link
+            href="/contact"
+            onClick={() => setOpen(false)}
+            className="mt-2 bg-primary text-primary-foreground text-sm font-semibold px-5 py-3 rounded-full hover:bg-coral transition-colors text-center"
           >
             Get in Touch
-          </button>
+          </Link>
         </div>
       </div>
     </header>

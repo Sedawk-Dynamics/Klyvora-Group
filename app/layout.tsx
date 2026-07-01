@@ -113,7 +113,7 @@ export default function RootLayout({
                 contactPoint: {
                   '@type': 'ContactPoint',
                   telephone: '+1-847-471-1251',
-                  email: 'Info@klyvora-group.com',
+                  email: 'Zak@Klyvora-Group.com',
                   contactType: 'sales',
                   areaServed: 'US',
                   availableLanguage: 'English',

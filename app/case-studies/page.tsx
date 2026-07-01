@@ -1,25 +1,21 @@
 import { Navbar } from "@/components/navbar"
 import { PageHeader } from "@/components/page-header"
-import { CaseStudiesSection } from "@/components/case-studies"
 import { Footer } from "@/components/contact-footer"
 import { JsonLd, breadcrumb } from "@/components/json-ld"
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Case Studies | Real Estate Success Stories | Klyvora",
-  description: "Discover how real estate firms transformed operations with Klyvora. See real results from multifamily REITs, PE funds, and property management companies.",
+  title: "Case Studies | Klyvora Group",
+  description: "Klyvora Group case studies are available on demand for serious inquiries. Contact us to request real estate accounting and finance success stories.",
   keywords: [
     "case studies",
-    "real estate success",
+    "real estate accounting",
     "accounting solutions",
-    "cost savings",
-    "efficiency gains",
     "real estate finance",
-    "talent success stories",
   ],
   openGraph: {
-    title: "Case Studies | Real Estate Success Stories | Klyvora",
-    description: "Real results from real estate companies transformed by Klyvora.",
+    title: "Case Studies | Klyvora Group",
+    description: "Case studies available on demand — serious inquiries only.",
     url: "/case-studies",
   },
   alternates: {
@@ -28,9 +24,8 @@ export const metadata: Metadata = {
 }
 
 const caseStudiesHeaderData = {
-  title: "Client Success Stories",
-  subtitle:
-    "Real results from real estate companies that transformed their operations with Klyvora.",
+  title: "Case Studies Available on Demand",
+  subtitle: "Serious Inquiries Only",
   backHref: "/",
   backLabel: "Back to Home",
 }
@@ -41,7 +36,6 @@ export default function CaseStudies() {
       <JsonLd data={breadcrumb([{ name: "Home", path: "/" }, { name: "Case Studies", path: "/case-studies" }])} />
       <Navbar />
       <PageHeader {...caseStudiesHeaderData} />
-      <CaseStudiesSection />
       <Footer />
     </main>
   )

@@ -7,8 +7,8 @@ import { cn } from "@/lib/utils"
 
 const contactDetails = [
   { icon: Phone, label: "Phone", value: "847 471 1251", href: "tel:8474711251" },
-  { icon: Mail, label: "Email", value: "Info@klyvora-group.com", href: "mailto:Info@klyvora-group.com" },
-  { icon: MapPin, label: "Offices", value: "Chicago, Illinois & New Delhi, India", href: null },
+  { icon: Mail, label: "Email", value: "Zak@Klyvora-Group.com", href: "mailto:Zak@Klyvora-Group.com" },
+  { icon: MapPin, label: "Offices", value: "Chicago, Illinois & Mumbai", href: null },
 ]
 
 const tickerItems = [
@@ -268,7 +268,7 @@ export function Footer() {
               professionals from India.
             </p>
             <p className="text-white/40 text-xs mt-4">
-              Chicago, Illinois &amp; New Delhi, India
+              Chicago, Illinois &amp; Mumbai
             </p>
           </div>
 
@@ -304,8 +304,8 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:Info@klyvora-group.com" className="text-white/70 text-sm hover:text-white transition-colors">
-                  Info@klyvora-group.com
+                <a href="mailto:Zak@Klyvora-Group.com" className="text-white/70 text-sm hover:text-white transition-colors">
+                  Zak@Klyvora-Group.com
                 </a>
               </li>
               {/* <li>
