@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: "Case Studies | Klyvora Group",
-  description: "Klyvora Group case studies are available on demand for serious inquiries. Contact us to request real estate accounting and finance success stories.",
+  description: "Klyvora Group case studies are available upon request for serious inquiries. Contact us to request real estate accounting and finance success stories.",
   keywords: [
     "case studies",
     "real estate accounting",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Case Studies | Klyvora Group",
-    description: "Case studies available on demand — serious inquiries only.",
+    description: "Case studies available upon request — serious inquiries only.",
     url: "/case-studies",
   },
   alternates: {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 }
 
 const caseStudiesHeaderData = {
-  title: "Case Studies Available on Demand",
+  title: "Case Studies Available Upon Request",
   subtitle: "Serious Inquiries Only",
   backHref: "/",
   backLabel: "Back to Home",
