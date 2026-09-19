@@ -291,6 +291,11 @@ export function Footer() {
                   </button>
                 </li>
               ))}
+              <li>
+                <a href="/careers" className="text-white/70 text-sm hover:text-white transition-colors">
+                  Careers
+                </a>
+              </li>
             </ul>
           </nav>
 

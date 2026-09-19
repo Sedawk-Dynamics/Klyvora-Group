@@ -11,6 +11,7 @@ const navLinks = [
   { label: "Roles", href: "/roles", external: true },
   { label: "Case Studies", href: "/case-studies", external: true },
   { label: "Blog", href: "/blog", external: true },
+  { label: "Careers", href: "/careers", external: true },
   { label: "Contact", href: "/contact", external: true },
 ]
 
