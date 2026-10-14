@@ -252,27 +252,24 @@ export function BlogSection({ posts }: { posts: GhostPost[] }) {
           )
         )}
 
-        {/* Newsletter CTA */}
+        {/* Contact CTA */}
         <div
           className={`mt-20 bg-gradient-to-r from-secondary/20 to-coral/20 rounded-xl border border-secondary/30 p-8 md:p-12 text-center ${
             visible ? "animate-fade-up" : "opacity-0"
           }`}
           style={{ animationDelay: "200ms" }}
         >
-          <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">Stay Updated</h3>
+          <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">Looking to Grow Your Finance Team?</h3>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Subscribe to our newsletter for the latest insights on real estate accounting and finance talent management.
+            Talk to us about placing Big Four-caliber accounting and finance professionals with your real estate firm.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 bg-white border border-border rounded-lg focus:outline-none focus:border-secondary transition-colors"
-            />
-            <button className="px-6 py-3 bg-secondary text-white font-semibold rounded-lg hover:bg-coral transition-colors whitespace-nowrap">
-              Subscribe
-            </button>
-          </div>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-white font-semibold rounded-lg hover:bg-coral transition-colors whitespace-nowrap"
+          >
+            Get in Touch
+            <ArrowRight size={18} aria-hidden="true" />
+          </Link>
         </div>
       </div>
     </section>

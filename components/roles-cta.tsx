@@ -40,7 +40,7 @@ export function RolesCta() {
             Roles We Hire
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl text-pretty">
-            From property accountants to acquisition analysts, we place Big-Four-caliber finance talent
+            From property accountants to acquisition analysts, we place Big Four-caliber finance talent
             for real estate investment firms.
           </p>
         </div>

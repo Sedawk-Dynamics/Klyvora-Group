@@ -7,7 +7,7 @@ const pillars = [
   {
     icon: Target,
     title: "Our Mission",
-    body: "Connect U.S. real estate firms with Big-Four-caliber finance talent from India—globalizing teams, not just offshoring tasks.",
+    body: "Connect U.S. real estate firms with Big Four-caliber finance talent from India—globalizing teams, not just offshoring tasks.",
     accent: {
       bg: "hover:bg-emerald-50",
       iconBg: "group-hover:bg-emerald-100",

@@ -30,7 +30,7 @@ const perks = [
   { icon: Globe2, title: "Global Exposure", text: "Work directly with U.S. real estate investment firms." },
   { icon: Briefcase, title: "Work From Home", text: "Fully remote roles with a structured, supportive team." },
   { icon: TrendingUp, title: "Career Growth", text: "Build deep expertise in real estate accounting and finance." },
-  { icon: GraduationCap, title: "Big-Four Standards", text: "Grow alongside CA/CPA-qualified professionals." },
+  { icon: GraduationCap, title: "Big Four Standards", text: "Grow alongside CA/CPA-qualified professionals." },
 ]
 
 export default function CareersPage() {

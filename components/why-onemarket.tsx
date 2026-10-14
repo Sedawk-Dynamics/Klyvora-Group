@@ -1,12 +1,13 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import Link from "next/link"
 import { Check, ArrowRight } from "lucide-react"
 
 const features = [
   {
     heading: "Elite Talent From India",
-    subtitle: "Big Four-Caliber Professionals",
+    subtitle: "Big Four-caliber Professionals",
     description:
       "Access rigorously vetted accounting and finance professionals with Big Four and multinational experience—all trained to U.S. standards and ready to integrate into your team.",
     stats: [
@@ -65,7 +66,7 @@ export function WhyKlyvora() {
     <section
       ref={ref}
       className="py-32 relative overflow-hidden bg-[#0b1220]"
-      aria-label="Why Klyvora Services"
+      aria-label="Why Klyvora Group"
     >
 
       {/* Glow Background */}
@@ -202,7 +203,7 @@ export function WhyKlyvora() {
                 <div className="flex-1">
 
                   <div
-                    className={`group relative h-80 rounded-2xl border-2 p-8 flex flex-col justify-between overflow-hidden
+                    className={`group relative h-80 rounded-2xl border-2 p-8 flex flex-col justify-end overflow-hidden
                     transform transition-all duration-500
                     hover:-translate-y-3 hover:scale-[1.02]
                     hover:shadow-2xl
@@ -219,38 +220,9 @@ export function WhyKlyvora() {
                     <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(circle,white_1px,transparent_1px)] bg-[size:20px_20px]" />
 
                     <div className="relative z-10">
-
-                      <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 mb-4 border border-white/20">
-                        <div
-                          className={`w-2 h-2 rounded-full ${accentTextColors[
-                            feature.accent as keyof typeof accentTextColors
-                          ]
-                            }`}
-                        />
-                        <span className="text-xs text-white/70">
-                          Active Feature
-                        </span>
-                      </div>
-
-                      <h4 className="text-xl font-bold text-white mb-2">
+                      <h4 className="text-xl font-bold text-white">
                         {feature.heading}
                       </h4>
-
-                      <p className="text-white/70 text-sm">
-                        Integrated system for managing your global team with
-                        real-time insights.
-                      </p>
-                    </div>
-
-                    <div className="relative z-10 flex items-center justify-between pt-6 border-t border-white/10">
-                      <span className="text-xs text-white/60">
-                        Learn more
-                      </span>
-
-                      <ArrowRight
-                        size={16}
-                        className="text-white/60 group-hover:translate-x-1 transition-transform"
-                      />
                     </div>
 
                   </div>
@@ -273,11 +245,11 @@ export function WhyKlyvora() {
             </h3>
 
             <p className="text-white/60 text-sm">
-              Let's discuss how Klyvora Services can help your firm scale.
+              Let&apos;s discuss how Klyvora Group can help your firm scale.
             </p>
           </div>
 
-          <button className="flex items-center gap-2 px-8 py-3 rounded-full font-semibold text-white
+          <Link href="/contact" className="group flex items-center gap-2 px-8 py-3 rounded-full font-semibold text-white
           bg-gradient-to-r from-coral to-orange-500
           hover:scale-105 hover:shadow-xl hover:shadow-coral/40
           transition-all duration-300">
@@ -285,7 +257,7 @@ export function WhyKlyvora() {
             Get Started
 
             <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-          </button>
+          </Link>
 
         </div>
       </div>

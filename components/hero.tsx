@@ -112,7 +112,7 @@ export function Hero() {
           >
             Hire{" "}
             <span className="text-secondary drop-shadow-md">
-              Big 4 Accounting & Finance
+              Big Four Accounting & Finance
             </span>{" "}
             Talent
           </h1>
@@ -122,7 +122,7 @@ export function Hero() {
             className={`text-white/85 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl text-pretty drop-shadow-md ${visible ? "animate-fade-up delay-300" : "opacity-0"
               }`}
           >
-            Klyvora connects U.S. real estate investment firms with Big-Four-caliber
+            Klyvora connects U.S. real estate investment firms with Big Four-caliber
             accounting and financial analysis professionals based in India—rigorously
             vetted, selectively placed, and built for long-term partnerships. We
             leverage the most cutting-edge AI tools to bring additional efficiencies and

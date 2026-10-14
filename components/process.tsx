@@ -129,7 +129,7 @@ export function Process() {
               The Klyvora Advantage
             </p>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-white leading-tight text-balance">
-              Big-Four talent. A fraction of the cost.<br className="hidden md:block" /> Long-term partnerships.
+              Big Four talent. A fraction of the cost.<br className="hidden md:block" /> Long-term partnerships.
             </h2>
           </div>
           <button

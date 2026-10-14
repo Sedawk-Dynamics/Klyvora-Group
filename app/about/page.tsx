@@ -7,7 +7,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: "About Klyvora | Mission, Vision & Values",
-  description: "Learn about Klyvora mission to connect elite accounting talent from India with U.S. real estate firms. Discover our vision, values, and commitment to quality.",
+  description: "Learn about Klyvora's mission to connect elite accounting talent from India with U.S. real estate firms. Discover our vision, values, and commitment to quality.",
   keywords: [
     "about Klyvora",
     "company mission",

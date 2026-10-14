@@ -7,7 +7,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: "Finance & Accounting Roles We Hire | Klyvora Group",
-  description: "Explore accounting and finance roles we place for U.S. real estate investment firms. We specialize in Big-Four-caliber talent: CPA, accounting managers, financial analysts, and more.",
+  description: "Explore accounting and finance roles we place for U.S. real estate investment firms. We specialize in Big Four-caliber talent: CPA, accounting managers, financial analysts, and more.",
   keywords: [
     "accounting roles",
     "finance positions",

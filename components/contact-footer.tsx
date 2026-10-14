@@ -2,11 +2,12 @@
 
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { MapPin, Phone, Mail, Linkedin, Send, CheckCircle2 } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const contactDetails = [
-  { icon: Phone, label: "Phone", value: "847 471 1251", href: "tel:8474711251" },
+  { icon: Phone, label: "Phone", value: "(847) 471-1251", href: "tel:+18474711251" },
   { icon: Mail, label: "Email", value: "Zak@Klyvora-Group.com", href: "mailto:Zak@Klyvora-Group.com" },
   { icon: MapPin, label: "Offices", value: "Chicago, Illinois & Mumbai", href: null },
 ]
@@ -111,12 +112,12 @@ export function Contact() {
               <div className="mt-8 pt-8 border-t border-white/10">
                 <p className="text-white/50 text-xs font-medium mb-3">Business Hours</p>
                 <p className="text-white text-sm">Monday – Friday</p>
-                <p className="text-white/70 text-sm">9:00 AM – 6:00 PM CST</p>
+                <p className="text-white/70 text-sm">9:00 AM – 6:00 PM CT</p>
               </div>
 
               <div className="mt-8">
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/company/klyvora-group/"
                   className="inline-flex items-center gap-2 text-secondary text-sm font-semibold hover:text-white transition-colors"
                   aria-label="Connect with Klyvora on LinkedIn"
                   target="_blank"
@@ -229,11 +230,6 @@ export function Contact() {
 }
 
 export function Footer() {
-  const handleNavClick = (href: string) => {
-    const el = document.querySelector(href)
-    if (el) el.scrollIntoView({ behavior: "smooth" })
-  }
-
   // Duplicate items for seamless marquee loop
   const tickerAll = [...tickerItems, ...tickerItems]
 
@@ -244,9 +240,9 @@ export function Footer() {
       <div className="border-t border-white/10 border-b border-b-white/10 py-3 overflow-hidden marquee-track" aria-hidden="true">
         <div className="flex animate-marquee whitespace-nowrap gap-0">
           {tickerAll.map((item, i) => (
-            <span key={i} className="inline-flex items-center gap-4 text-xs font-bold tracking-widest uppercase text-white/50 px-8">
-              {item}
-              <span className="w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0" />
+            <span key={i} className="inline-flex items-center text-xs font-bold tracking-widest uppercase text-white/50">
+              <span className="px-6">{item}</span>
+              <span className="text-secondary text-base leading-none">•</span>
             </span>
           ))}
         </div>
@@ -277,25 +273,18 @@ export function Footer() {
             <p className="text-white/40 text-xs font-semibold tracking-widest uppercase mb-4">Navigation</p>
             <ul className="flex flex-col gap-3">
               {[
-                { label: "About", href: "#about" },
-                { label: "Roles", href: "#roles" },
-                { label: "Process", href: "#process" },
-                { label: "Contact", href: "#contact" },
+                { label: "About", href: "/about" },
+                { label: "Roles", href: "/roles" },
+                { label: "How It Works", href: "/#process" },
+                { label: "Careers", href: "/careers" },
+                { label: "Contact", href: "/contact" },
               ].map((link) => (
                 <li key={link.href}>
-                  <button
-                    onClick={() => handleNavClick(link.href)}
-                    className="text-white/70 text-sm hover:text-white transition-colors"
-                  >
+                  <Link href={link.href} className="text-white/70 text-sm hover:text-white transition-colors">
                     {link.label}
-                  </button>
+                  </Link>
                 </li>
               ))}
-              <li>
-                <a href="/careers" className="text-white/70 text-sm hover:text-white transition-colors">
-                  Careers
-                </a>
-              </li>
             </ul>
           </nav>
 
@@ -304,8 +293,8 @@ export function Footer() {
             <p className="text-white/40 text-xs font-semibold tracking-widest uppercase mb-4">Contact</p>
             <ul className="flex flex-col gap-3">
               <li>
-                <a href="tel:8474711251" className="text-white/70 text-sm hover:text-white transition-colors">
-                  847 471 1251
+                <a href="tel:+18474711251" className="text-white/70 text-sm hover:text-white transition-colors">
+                  (847) 471-1251
                 </a>
               </li>
               <li>
@@ -324,7 +313,7 @@ export function Footer() {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white/40 text-xs">
-            &copy; {new Date().getFullYear()} Klyvora (Klyvora , LLC). All rights reserved.
+            &copy; {new Date().getFullYear()} Klyvora Group. All rights reserved.
           </p>
         </div>
       </div>

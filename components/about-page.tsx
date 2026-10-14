@@ -8,7 +8,7 @@ const pillars = [
     icon: Target,
     title: "Our Mission",
     short: "Connect U.S. firms with top talent",
-    full: "Connect U.S. real estate firms with Big-Four-caliber finance talent from India—globalizing teams, not just offshoring tasks.",
+    full: "Connect U.S. real estate firms with Big Four-caliber finance talent from India—globalizing teams, not just offshoring tasks.",
     accent: {
       bg: "bg-emerald/10",
       icon: "text-emerald",
@@ -172,8 +172,8 @@ export function AboutPage() {
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Founded with a simple belief—that the best talent transcends
-                borders, Klyvora emerged from deep experience in real estate
+                Founded on a simple belief—that the best talent transcends
+                borders—Klyvora emerged from deep experience in real estate
                 finance, international markets, and recruitment. We recognized
                 that U.S. firms were struggling to find accounting
                 professionals with the specialized real estate expertise they

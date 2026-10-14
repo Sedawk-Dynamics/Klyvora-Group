@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.klyvora-group.com'),
   title: 'Klyvora Group | Global Accounting & Finance Talent for Real Estate',
   description:
-    'Connect with Big-Four-caliber accounting and finance professionals from India. Klyvora Group places elite talent for U.S. real estate investment firms, reducing costs while maintaining uncompromising quality.',
+    'Connect with Big Four-caliber accounting and finance professionals from India. Klyvora Group places elite talent for U.S. real estate investment firms, reducing costs while maintaining uncompromising quality.',
   keywords: [
     'accounting talent',
     'finance professionals',
@@ -60,8 +60,6 @@ export const metadata: Metadata = {
       'Elite accounting professionals from India for U.S. real estate firms',
     images: ['https://www.klyvora-group.com/og-image.png'],
   },
-
-  generator: 'v0.app',
 
   manifest: '/site.webmanifest',
 
@@ -109,7 +107,7 @@ export default function RootLayout({
                 url: SITE_URL,
                 logo: `${SITE_URL}/logo.png`,
                 description:
-                  'Klyvora Group places Big-Four-caliber accounting and finance professionals from India with U.S. real estate investment firms.',
+                  'Klyvora Group places Big Four-caliber accounting and finance professionals from India with U.S. real estate investment firms.',
                 contactPoint: {
                   '@type': 'ContactPoint',
                   telephone: '+1-847-471-1251',
